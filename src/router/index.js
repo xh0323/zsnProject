@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
+import todo from '@/components/todo-list/todo'
 
 Vue.use(Router)
 
@@ -9,7 +10,10 @@ export default new Router({
     {
       path: '/',
       name: 'Hello',
-      component: Hello
+      components: {
+        default: Hello,
+        a: todo
+      }
     }
   ]
 })
